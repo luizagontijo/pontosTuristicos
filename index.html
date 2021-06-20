@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <title>Pontos Turísticos BH</title>
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .main-head {
+            grid-area: header;
+        }
+
+
+        .mercado {
+            grid-area: mercado;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .pampulha {
+            grid-area: pampulha;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+
+        .amendoim {
+            grid-area: amendoim;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .main-footer {
+            grid-area: footer;
+        }
+
+        
+        .main-nav {
+            grid-area: nav;
+            width: 70%;
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+
+        .icone {
+            width: 30%;
+            align-items: center;
+        }
+
+        img {
+            width: 90%;
+        }
+
+        .container {
+            background-color: #3e8192;
+            border-radius: 10px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-areas:
+                "header"
+                "mercado"
+                "pampulha"
+                "amendoim"
+                "nav"
+                "footer";
+        }
+
+        @media (min-width: 500px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "header    header "
+                    "pampulha  pampulha"
+                    "mercado  amendoim"
+                    "nav       nav"
+                    "footer    footer";
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "header header    header"
+                    "mercado pampulha amendoim"
+                    "nav     nav      nav"
+                    "footer  footer   footer"
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <header class="main-head mt-4 mb-4">
+            <h1>Pontos Turísticos em Belo Horizonte</h1>
+        </header>
+
+        <article class="mercado p-3">
+            <img class="icone" src="pontosNovo/img/mercadinho.png" alt="">
+            <h3>Mercado Central</h3>
+            <img src="pontosNovo/img/mercado.jpg" alt="">
+            <p>O <strong>Mercado Central</strong> é um mercado localizado no Centro de Belo Horizonte. <br />
+                Foi criado em 7 de setembro de 1929 e seu galpão ocupa um quarteirão inteiro do Centro da cidade. <br />
+                É um lugar tanto para turistas quanto para moradores comprarem alimentos frescos, tomarem cerveja gelada
+                e comerem pão de queijo recheado com pernil.</p>
+        </article>
+        <article class="pampulha p-3">
+            <img class="icone" src="pontosNovo/img/lagoinha.png" alt="">
+            <h3>Lagoa da Pampulha</h3>
+
+            <p>Em 1936, o prefeito de Belo Horizonte, <i>Otacílio Negrão de Lima</i>, iniciou o represamento do ribeirão
+                Pampulha, objetivando a construção de uma lagoapara amortecer enchentes abastecer a capital. <br />
+                Hoje a avanida em volta da lagoa leva o nome do prefeito. <br />
+                Nessa avenida encontram-se outras atrações também que fazem parte do complexo da Pampulha, como museus,
+                zoológico, jardim botânico, monumentos arquitetônicos e os estádios Mineirinho e Mineirão.</p>
+            <img src="pontosNovo/img/lagoa.jpg" alt="">
+        </article>
+        <article class="amendoim p-3">
+            <img class="icone" src="pontosNovo/img/amendoinzinho.png" alt="">
+            <h3> Rua do Amendoim</h3>
+            <img src="pontosNovo/img/amendoim.jpg" alt="">
+            <p>Pode parecer bobeira, mas um lugar muito legal de Belo Horizonte é a <strong>Rua do Amendoim</strong>,
+                que ficou conhecida por uma ilusão de ótica. <br />
+                Visitando-a de automóvel, ao deixar o motor desligado e desengrenado e soltar os freios, temos a ilusão
+                de que o automóvel sobe a rua, ao invés de descê-la. <br />
+                É bom ir no final da tarde para depois aproveitar a vista do <u>Mirante do Mangabeiras</u>, que fica ali
+                pertinho. </p>
+        </article>
+
+        <nav class="main-nav mx-auto p-3">
+            <h4>Outras versões desse site:</h4>
+            <div class="row">
+                <div class="col-4">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active px-0" data-toggle="list" href="#html"
+                            role="tab" aria-controls="home">HTML</a>
+                        <a class="list-group-item list-group-item-action px-0" data-toggle="list" href="#css" role="tab"
+                            aria-controls="profile">CSS</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active text-justify" id="html" role="tabpanel" aria-labelledby="list-home-list">
+                            Veja esse mesmo site desenvolvido em março de 2021, utilizando apenas HTML.
+                            <br>
+                            <a href="pontosNovo/pontos_com_fotos.html">Clique aqui!</a>
+                        </div>
+                        <div class="tab-pane fade text-justify" id="css" role="tabpanel" aria-labelledby="list-profile-list">
+                            Veja também esse mesmo site desenvolvido em abril de 2021, agora com HTML e CSS. <br>
+                            <a href="pontosNovo/index.html">Clique aqui!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <footer class="main-footer p-3 text-monospace">Desenvolvido por Luiza Gontijo em Maio de 2021</footer>
+    </div>
+
+    <!-- bootstrap.bundle.min.js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
